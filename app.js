@@ -35,7 +35,7 @@ app.get("/posts", (req, res) => {
 
 app.get("/post/:id", (req, res) => {
     const post = posts.find(post => post.id === req.params.id);
-    res.render("post", { ...post });
+    res.render("post", post);
 } );
 
 app.all("*", (req, res) => {
